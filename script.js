@@ -7,7 +7,8 @@ const initialTimersConfig = [
     { id: 'triceps', name: 'Triceps', durationHours: 48 },
     { id: 'biceps', name: 'Biceps', durationHours: 24 },
     { id: 'abs', name: 'Abs', durationHours: 24 },
-    { id: 'fourarms', name: 'FourArms', durationHours: 24 }
+    { id: 'fourarms', name: 'FourArms', durationHours: 24 },
+    { id: 'calf', name: 'Calf', durationHours: 24 }
 ];
 
 // Load states from Local Storage or initialize defaults
@@ -78,7 +79,7 @@ initialTimersConfig.forEach(config => {
     card.innerHTML = `
                 <div class="card-header">
                     <span class="muscle-title">${state.name}</span>
-                    <div class="window-controls">🗖 ✕</div>
+                    <!-- <div class="window-controls">🗖 ✕</div> -->
                 </div>
                 <div class="timer-display-container">
                     <svg class="progress-ring" width="180" height="180">
@@ -177,6 +178,7 @@ setInterval(() => {
                 state.endTime = null;
                 document.getElementById(`card-${config.id}`).classList.remove('active');
                 document.getElementById(`icon-${config.id}`).innerHTML = '<path d="M8 5v14l11-7z"/>';
+
             }
             updateVisuals(config.id);
         }

@@ -81,7 +81,7 @@ body {
 
 .progress-ring__circle-bg {
     fill: transparent;
-    stroke: #333333;
+    stroke: #db0c0cff;
     stroke-width: 8;
 }
 
